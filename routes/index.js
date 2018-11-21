@@ -83,6 +83,8 @@ router.post('/:pollId/:questionId/vote', (req, res, next) => {
     Poll.update({'questions._id':questionId}
         , {$inc: {[identifier] : 1}}, {}, (err, numberAffected) => {
         let Pusher = require('pusher');
+
+        console.log("APP ID:"+process.env.PUSHER_APP_ID+" KEY "+process.env.PUSHER_APP_KEY+" SECRET "+process.env.PUSHER_APP_SECRET);
         let pusher = new Pusher({
             appId: process.env.PUSHER_APP_ID,
             key: process.env.PUSHER_APP_KEY,

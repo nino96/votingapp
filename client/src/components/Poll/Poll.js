@@ -90,7 +90,7 @@ class Poll extends React.Component{
             console.log("ID : "+pollId);
             console.log("choice : "+this.state["radio"].value);
 
-            console.log("Socket ID"+this.socketId);
+            console.log("Socket ID"+this.state.socketId);
 
             axios.post(`${this.serverdomain}/api/` + pollId + '/' + questionId + '/vote', {choice: choice, socketId: this.state.socketId})
             .then(res => {this.getPolls(this.state.poll.pollid)})
