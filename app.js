@@ -23,7 +23,7 @@ app.use('/api', userRouter);
 app.use('/api', indexRouter);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // app.use(function (req, res, next) {
