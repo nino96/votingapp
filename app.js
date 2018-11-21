@@ -23,6 +23,7 @@ app.use('/api', userRouter);
 app.use('/api', indexRouter);
 
 app.get("*", (req, res) => {
+  console.log("Request on server"+req);
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
