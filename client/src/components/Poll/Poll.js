@@ -46,6 +46,8 @@ class Poll extends React.Component{
                 var pollId = data.pollId;
                 var choice = data.choice;
                 var voteCount = document.querySelector('#vote-count-' + data.questionId + '-' + choice);
+
+                if(voteCount){
                 voteCount.textContent++;
                 // we'll flash the colour for a moment
                 var color = voteCount.style.color;
@@ -56,6 +58,7 @@ class Poll extends React.Component{
                 }, 3000);
                 voteCount.style.color = 'green';
                 voteCount.style.fontWeight = '900';
+            }
 
             });
     }
