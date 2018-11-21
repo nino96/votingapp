@@ -33,7 +33,7 @@ class Poll extends React.Component{
         this.getPolls(params.pollid);
 
 
-        var pusher = new Pusher('4702eba2086a27987735', { cluster: 'ap2' });
+        var pusher = new Pusher('0122d68dbf136b2e153d', { cluster: 'mt1' });
 
         // retrieve the socket ID once we're connected
         pusher.connection.bind('connected', () => {
