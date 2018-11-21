@@ -3,6 +3,7 @@ const express = require('express');
 var createError = require('http-errors');
 // const router = express.Router();
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 require('mongoose').connect(process.env.MONGODB_URI || 'mongodb://localhost/votingapp', { useNewUrlParser: true });
