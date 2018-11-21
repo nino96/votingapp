@@ -17,7 +17,7 @@ var userRouter = require('./routes/userRoute');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(logger('dev'));
-app.use(cors({ origin: `http://localhost:3000` }))
+app.use(cors({ origin: `https://votingapp-apachackathon.herokuapp.com/` }))
 
 app.use('/api', userRouter);
 app.use('/api', indexRouter);

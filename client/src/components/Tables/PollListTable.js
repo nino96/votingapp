@@ -23,7 +23,7 @@ class PollListTable extends Component {
   }
 
   onClickClosePollButton(cell, row, rowIndex){
-    fetch(`http://localhost:5777/api/closePoll`, {
+    fetch(`https://votingapp-apachackathon.herokuapp.com:5777/api/closePoll`, {
       method: 'POST',
       headers: new Headers({'Content-Type':'application/json'}),
       body: JSON.stringify({"pollid":row.pollid})
