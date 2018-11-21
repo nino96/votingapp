@@ -22,7 +22,8 @@ app.use(cors({ origin: `https://votingapp-apachackathon.herokuapp.com/` }))
 app.use('/api', userRouter);
 app.use('/api', indexRouter);
 
-app.get("/", (req, res) => {
+app.use(express.static('client/build'));
+app.get("*", (req, res) => {
   console.log("Request on server"+req);
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
