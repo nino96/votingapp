@@ -30,9 +30,9 @@ app.get("*", (req, res) => {
 //     res.status(404).send({ error: 'Not found' })
 // });
 
-app.use(function(req, res, next) {
-    next(createError(404));
-  });
+// app.use(function(req, res, next) {
+//     next(createError(404));
+//   });
 
 module.exports = app
 

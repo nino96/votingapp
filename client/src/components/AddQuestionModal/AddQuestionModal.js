@@ -105,7 +105,7 @@ class AddQuestionModal extends Component {
         }
         
         console.log(pollid);
-        fetch(`http://localhost:3002/api/addQuestionToPoll`, {
+        fetch(`http://localhost:5777/api/addQuestionToPoll`, {
             method: 'POST',
             headers: new Headers({'Content-Type':'application/json'}),
             body: JSON.stringify({pollid:pollid,topic:topic,choices:choices})

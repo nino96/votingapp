@@ -12,7 +12,7 @@ class AddQuestions extends Component{
 
     constructor(props){
         super(props);
-        this.serverdomain = 'http://localhost:3002/api';
+        this.serverdomain = 'http://localhost:5777/api';
         this.state={
             showQuestionModal:false,
             questionListData:null

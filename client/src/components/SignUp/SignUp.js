@@ -40,7 +40,7 @@ class SignUp extends Component {
                 password: this.state.password1
               };
               console.log(data)
-              var request = new Request('http://localhost:3002/api/createUser',{
+              var request = new Request('http://localhost:5777/api/createUser',{
                 method:'POST',
                 headers: new Headers({'Content-Type':'application/json'}),
                 body: JSON.stringify(data)
