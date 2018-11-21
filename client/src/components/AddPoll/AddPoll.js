@@ -13,7 +13,7 @@ class AddPoll extends Component{
     constructor(props){
         super(props);
 
-        this.serverdomain = 'https://votingapp-apachackathon.herokuapp.com:5777/api';
+        this.serverdomain = 'https://votingapp-apachackathon.herokuapp.com/api';
         this.state = {
             polls : null,
             pollListTableData:null,
@@ -63,7 +63,7 @@ class AddPoll extends Component{
     goToQuestions(){
         var user = JSON.parse(localStorage.getItem('user'));
         console.log(user)
-        fetch(`https://votingapp-apachackathon.herokuapp.com:5777/api/createPoll`, {
+        fetch(`https://votingapp-apachackathon.herokuapp.com/api/createPoll`, {
             method: 'POST',
             headers: new Headers({'Content-Type':'application/json'}),
             body: JSON.stringify({"userid":user.userid, "pollname":this.state.pollname})

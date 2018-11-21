@@ -40,7 +40,7 @@ class SignUp extends Component {
                 password: this.state.password1
               };
               console.log(data)
-              var request = new Request('https://votingapp-apachackathon.herokuapp.com:5777/api/createUser',{
+              var request = new Request('https://votingapp-apachackathon.herokuapp.com/api/createUser',{
                 method:'POST',
                 headers: new Headers({'Content-Type':'application/json'}),
                 body: JSON.stringify(data)

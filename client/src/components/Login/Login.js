@@ -28,7 +28,7 @@ class Login extends Component {
     event.preventDefault();
 
     if(this.validateForm()){
-        fetch(`https://votingapp-apachackathon.herokuapp.com:5777/api/login`, {
+        fetch(`https://votingapp-apachackathon.herokuapp.com/api/login`, {
             method: 'POST',
             headers: new Headers({'Content-Type':'application/json'}),
             body: JSON.stringify({"email":this.state.email, "password":this.state.password})
@@ -42,7 +42,7 @@ class Login extends Component {
         })
     }
 
-    // fetch("https://votingapp-apachackathon.herokuapp.com:5777/api/login")
+    // fetch("https://votingapp-apachackathon.herokuapp.com/api/login")
     // .then(response => response.json())
     // .then(jsondata => {
     //     console.log(jsondata)

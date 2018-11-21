@@ -12,7 +12,7 @@ class AddQuestions extends Component{
 
     constructor(props){
         super(props);
-        this.serverdomain = 'https://votingapp-apachackathon.herokuapp.com:5777/api';
+        this.serverdomain = 'https://votingapp-apachackathon.herokuapp.com/api';
         this.state={
             showQuestionModal:false,
             questionListData:null

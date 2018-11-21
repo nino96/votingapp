@@ -9,7 +9,7 @@ import Pusher from 'pusher-js';
 class Poll extends React.Component{
     constructor(props){
         super(props);
-        this.serverdomain = 'https://votingapp-apachackathon.herokuapp.com:5777';
+        this.serverdomain = 'https://votingapp-apachackathon.herokuapp.com';
         this.socketId = null;
         this.state = {
             pollid:'',
