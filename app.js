@@ -5,7 +5,7 @@ var createError = require('http-errors');
 const cors = require('cors');
 
 const app = express();
-require('mongoose').connect('mongodb://localhost/votingapp', { useNewUrlParser: true });
+require('mongoose').connect(process.env.MONGODB_URI || 'mongodb://localhost/votingapp', { useNewUrlParser: true });
 
 const bodyParser = require('body-parser');
 const logger = require('morgan');
@@ -20,6 +20,10 @@ app.use(cors({ origin: `http://localhost:3000` }))
 
 app.use('/api', userRouter);
 app.use('/api', indexRouter);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+});
 
 // app.use(function (req, res, next) {
 //     res.status(404).send({ error: 'Not found' })

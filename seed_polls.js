@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('mongoose').connect('mongodb://localhost/votingapp', { useNewUrlParser: true });
+require('mongoose').connect(process.env.MONGODB_URI || 'mongodb://localhost/votingapp', { useNewUrlParser: true });
 
 const topics = [
     "Should dogs be allowed to fly?",

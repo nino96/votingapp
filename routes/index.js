@@ -1,4 +1,4 @@
-require('mongoose').connect('mongodb://localhost/votingapp');
+require('mongoose').connect(process.env.MONGODB_URI || 'mongodb://localhost/votingapp');
 
 let mongoose = require('mongoose');
 let router = require('express').Router();
@@ -37,7 +37,7 @@ router.post('/addQuestionToPoll', (req, res, next) => {
 });
 
 router.post('/createPoll', (req, res, next) => {
-    // mongoose.connect("mongodb://localhost/votingapp");
+    // mongoose.connect("process.env.MONGODB_URI || mongodb://localhost/votingapp");
     // var conn = mongoose.connection;
 
     // var ObjectID = require('mongodb').ObjectID;
@@ -58,7 +58,7 @@ router.post('/createPoll', (req, res, next) => {
 });
     
 router.post('/closePoll',(req, res, next) => {
-    // mongoose.connect("mongodb://localhost/votingapp");
+    // mongoose.connect("process.env.MONGODB_URI || mongodb://localhost/votingapp");
     // var conn = mongoose.connection;
     var pollid = req.body.pollid;
     // var ObjectID = require('mongodb').ObjectID;

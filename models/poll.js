@@ -1,7 +1,7 @@
 
 let mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
-// let connection = mongoose.connect('mongodb://localhost/votingapp', {useNewUrlParser: true});
+// let connection = mongoose.connect('process.env.MONGODB_URI || mongodb://localhost/votingapp', {useNewUrlParser: true});
 var QuestionSchema = require('./question').schema;
 
 autoIncrement.initialize(mongoose.connection);

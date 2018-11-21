@@ -17,7 +17,7 @@ router.post('/login', (req, res, next) => {
 
 router.post('/createUser', (req, res, next) => {
 
-    mongoose.connect("mongodb://localhost/votingapp");
+    mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/votingapp");
     var conn = mongoose.connection;
     // var Schema = mongoose.users;
     
